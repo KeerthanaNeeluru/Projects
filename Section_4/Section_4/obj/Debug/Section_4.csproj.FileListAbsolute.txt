@@ -1,0 +1,8 @@
+C:\Users\Keerthana\OneDrive\Desktop\job\simpli\Projects\Section_4\Section_4\bin\Debug\Section_4.exe.config
+C:\Users\Keerthana\OneDrive\Desktop\job\simpli\Projects\Section_4\Section_4\bin\Debug\Section_4.exe
+C:\Users\Keerthana\OneDrive\Desktop\job\simpli\Projects\Section_4\Section_4\bin\Debug\Section_4.pdb
+C:\Users\Keerthana\OneDrive\Desktop\job\simpli\Projects\Section_4\Section_4\obj\Debug\Section_4.csproj.AssemblyReference.cache
+C:\Users\Keerthana\OneDrive\Desktop\job\simpli\Projects\Section_4\Section_4\obj\Debug\Section_4.csproj.SuggestedBindingRedirects.cache
+C:\Users\Keerthana\OneDrive\Desktop\job\simpli\Projects\Section_4\Section_4\obj\Debug\Section_4.csproj.CoreCompileInputs.cache
+C:\Users\Keerthana\OneDrive\Desktop\job\simpli\Projects\Section_4\Section_4\obj\Debug\Section_4.exe
+C:\Users\Keerthana\OneDrive\Desktop\job\simpli\Projects\Section_4\Section_4\obj\Debug\Section_4.pdb
