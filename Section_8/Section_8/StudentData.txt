@@ -1,0 +1,4 @@
+Eva,Class A
+Sven,Class B
+Samanta,Class C
+Jhon,Class A
