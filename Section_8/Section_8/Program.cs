@@ -33,17 +33,17 @@ namespace Section_8
 
             return students;
         }
-        static void SortStudentData(List<Student> students)
+        static void SortData(List<Student> students)
         {
             students.Sort((s1, s2) => s1.Name.CompareTo(s2.Name));
         }
 
-        static List<Student> SearchStudentByName(List<Student> students, string name)
+        static List<Student> SearchData(List<Student> students, string name)
         {
             return students.FindAll(s => s.Name.ToLower() == name.ToLower());
         }
 
-        static void DisplayStudentData(List<Student> students)
+        static void DisplayData(List<Student> students)
         {
             if (students.Count == 0)
             {
@@ -61,31 +61,50 @@ namespace Section_8
 
         static void Main(string[] args)
         {
-            string fileName = "C:\\Users\\Keerthana\\OneDrive\\Desktop\\job\\simpli\\Projects\\Section_8\\Section_8\\StudentData.txt";
+            string fname = "C:\\Users\\Keerthana\\OneDrive\\Desktop\\job\\simpli\\Projects\\Section_8\\Section_8\\StudentData.txt";
             
             // Reading student data from the file
-            List<Student> studentData = ReadStudentData(fileName);
+            List<Student> studata = ReadStudentData(fname);
 
-            // Sorting student data by name
-            SortStudentData(studentData);
 
-            // Displaying sorted student data
-            DisplayStudentData(studentData);
-
-            // Searching for a student by name
-            Console.Write("Enter the name of the student to search for: ");
-            string searchName = Console.ReadLine();
-
-            List<Student> searchResult = SearchStudentByName(studentData, searchName);
-            if (searchResult.Count > 0)
+            char ch;
+            do
             {
-                Console.WriteLine("Search Results:");
-                DisplayStudentData(searchResult);
-            }
-            else
-            {
-                Console.WriteLine($"No student found with the name '{searchName}'.");
-            }
+                Console.WriteLine("Select\n1.Display data\n2.SortData\n3.Search for student using name");
+                int choice=int.Parse(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        Console.WriteLine("Display Data");
+                        DisplayData(studata);
+                        break;
+                    case 2:
+                        Console.WriteLine("Sort Data");
+                        SortData(studata);
+                        DisplayData(studata);
+                        break;
+                    case 3:
+                        Console.WriteLine("Search for student using name\n");
+                        Console.Write("Enter the name of the student to search for: ");
+                        string searchName = Console.ReadLine();
+
+                        List<Student> searchResult = SearchData(studata, searchName);
+                        if (searchResult.Count > 0)
+                        {
+                            Console.WriteLine("Search Results:");
+                            DisplayData(searchResult);
+                        }
+                        else
+                        {
+                            Console.WriteLine($"No student found with the name '{searchName}'.");
+                        }
+
+                        break;
+                }
+                Console.WriteLine("If you want to continue press y");
+                ch = char.Parse(Console.ReadLine().ToLower());
+            } while (ch == 'y');
+
             Console.ReadKey();
         }
     }
